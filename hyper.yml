@@ -48,6 +48,6 @@ testDiscovery:
 
 # 'testDiscovery' determines how the tests are discovered. It uses Linux commands or a Python script to locate the test files.
 
-testRunnerCommand: Sleep 10000000
+testRunnerCommand: Sleep 1000
 
 # The 'testRunnerCommand' specifies how the discovered test files are executed, where $test is replaced by the discovered test file path.

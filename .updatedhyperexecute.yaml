@@ -23,11 +23,11 @@ testDiscovery:
     mode: dynamic
     shell: bash
     type: raw
-testRunnerCommand: Sleep 10000000
+testRunnerCommand: Sleep 1000
 globalTimeout: 90
 tunnelOpts:
     testsPerTunnel: 10
-jobID: c9babc55-9b4f-45e5-a0a3-8be2957e11e5
+jobID: 664473e0-7ede-4a89-b2d2-c242b3dfaf67
 codeDirectory: panaya_sudhir_sir
 framework:
     name: ""
