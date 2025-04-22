@@ -1,0 +1,145 @@
+{
+    "id": "c9babc55-9b4f-45e5-a0a3-8be2957e11e5",
+    "created_at": "2025-04-22T17:52:43Z",
+    "update_at": "2025-04-22T17:53:42Z",
+    "global_timeout": 90,
+    "tunnel_name": "",
+    "start_time": "2025-04-22T17:53:15Z",
+    "end_time": "2025-04-22T17:53:42Z",
+    "summary": {
+        "total_time": 27000000000,
+        "execution_time": 27000000000,
+        "total_tasks": 2,
+        "build_time_consumed": 54000000000,
+        "jobTestExecutionTime": "0s",
+        "failed_tasks": 1,
+        "total_stage_info": {
+            "prerun": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            },
+            "scenario": {
+                "StageFailedPercent": 100,
+                "StagePassPercent": 0,
+                "TotalStage": 2
+            },
+            "test_discovery": {
+                "StageFailedPercent": 0,
+                "StagePassPercent": 100,
+                "TotalStage": 2
+            }
+        },
+        "status": "failed",
+        "job_link": "https://hyperexecute.lambdatest.com/hyperexecute/task?jobId=c9babc55-9b4f-45e5-a0a3-8be2957e11e5"
+    },
+    "tasks": [
+        {
+            "id": "c8451283-0cfe-47f2-8682-645ecc5836a3",
+            "os": "win",
+            "status": "failed",
+            "remark": "error in running test suites - step 1 - exit status 1",
+            "debug": false,
+            "created_at": "2025-04-22T17:53:14Z",
+            "update_at": "2025-04-22T17:53:42Z",
+            "start_time": "2025-04-22T17:53:15Z",
+            "end_time": "2025-04-22T17:53:42Z",
+            "group_number": 1,
+            "stages": [
+                {
+                    "id": "32b16ed8-6c22-4a31-85ad-e6695d8ae340",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-04-22T17:53:16Z",
+                    "started_at": "2025-04-22T17:53:16Z",
+                    "updated_at": "2025-04-22T17:53:40Z",
+                    "order": 1,
+                    "task_number": 1
+                },
+                {
+                    "id": "84d151de-aa4f-4540-b15c-a6c9129458e3",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-04-22T17:53:40Z",
+                    "started_at": "2025-04-22T17:53:40Z",
+                    "updated_at": "2025-04-22T17:53:40Z",
+                    "order": 2,
+                    "task_number": 1
+                },
+                {
+                    "id": "819e9a48-ad11-43b9-af83-5575190edce6",
+                    "type": "scenario",
+                    "status": "failed",
+                    "name": "test1.py",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-04-22T17:53:40Z",
+                    "started_at": "2025-04-22T17:53:42Z",
+                    "updated_at": "2025-04-22T17:53:42Z",
+                    "order": 3,
+                    "task_number": 1
+                }
+            ]
+        },
+        {
+            "id": "32cde0ad-7dbb-4938-a71f-da3cb03ac3ae",
+            "os": "win",
+            "status": "completed",
+            "remark": "completed",
+            "debug": false,
+            "created_at": "2025-04-22T17:53:14Z",
+            "update_at": "2025-04-22T17:53:42Z",
+            "start_time": "2025-04-22T17:53:15Z",
+            "end_time": "2025-04-22T17:53:42Z",
+            "group_number": 2,
+            "stages": [
+                {
+                    "id": "6af68a5f-922f-4f0a-85dc-d1a23b31927f",
+                    "type": "prerun",
+                    "status": "completed",
+                    "name": "pre",
+                    "iteration": 0,
+                    "link": "pre.log",
+                    "created_at": "2025-04-22T17:53:15Z",
+                    "started_at": "2025-04-22T17:53:15Z",
+                    "updated_at": "2025-04-22T17:53:39Z",
+                    "order": 1,
+                    "task_number": 2
+                },
+                {
+                    "id": "353b2da5-03b5-4d47-b4ea-1eeab500362d",
+                    "type": "test_discovery",
+                    "status": "completed",
+                    "name": "discovery",
+                    "iteration": 0,
+                    "link": "discovery.log",
+                    "created_at": "2025-04-22T17:53:39Z",
+                    "started_at": "2025-04-22T17:53:40Z",
+                    "updated_at": "2025-04-22T17:53:40Z",
+                    "order": 2,
+                    "task_number": 2
+                },
+                {
+                    "id": "44fd9a13-03a5-4659-a3a8-49c13334238a",
+                    "type": "scenario",
+                    "status": "muted",
+                    "name": "test2.py",
+                    "iteration": 0,
+                    "link": "command.1.0.log",
+                    "created_at": "2025-04-22T17:53:40Z",
+                    "started_at": "2025-04-22T17:53:42Z",
+                    "updated_at": "2025-04-22T17:53:42Z",
+                    "order": 3,
+                    "task_number": 2
+                }
+            ]
+        }
+    ],
+    "test_ids": null
+}
