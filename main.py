@@ -52,5 +52,5 @@ args = ["--start"]
 
 subprocess.Popen([exe_path] + args, creationflags=subprocess.DETACHED_PROCESS)
 
-print("🔥 Panaya Agent Restarted")
+print("🔥 Panaya Agent Started")
 
