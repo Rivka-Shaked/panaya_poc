@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 # Step 1: Open the Agent application (if needed)
-subprocess.Popen(r"C:\Program Files\Panaya\Agent\Agent.exe")  # Uncomment if Agent is not already running
+#subprocess.Popen(r"C:\Program Files\Panaya\Agent\Agent.exe")  # Uncomment if Agent is not already running
 
 # New Values to Update
 # new_values = {
@@ -50,10 +50,10 @@ subprocess.Popen(r"C:\Program Files\Panaya\Agent\Agent.exe")  # Uncomment if Age
 # Restart Agent
 # print("Restarting Agent...")
 # os.system(r"type C:\Users\ltuser.ghtestVM\AppData\Local\Agent\config\settings.json") 
-# exe_path = r"C:\Program Files\Panaya\Agent\Agent.exe"
-# args = ["--start"]
+exe_path = r"C:\Program Files\Panaya\Agent\Agent.exe"
+args = ["--start"]
 
-# subprocess.Popen([exe_path] + args, creationflags=subprocess.DETACHED_PROCESS)
+subprocess.Popen([exe_path] + args, creationflags=subprocess.DETACHED_PROCESS)
 
 print("🔥 Panaya Agent Started")
 
