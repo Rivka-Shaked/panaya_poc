@@ -9,6 +9,7 @@ import time
 import pyautogui
 import pygetwindow as gw
 import subprocess
+import tempfile
 from pathlib import Path
 
 
@@ -59,8 +60,12 @@ print("🔥 Panaya Agent Started")
 
 # Step 1: Wait 10 seconds
 time.sleep(10)
+
+temp_dir = Path(tempfile.gettempdir())
+base_path_str = temp_dir / "Panaya Automation" / "Agent" / "logs"
+
 # Step 2: Define base logs path
-base_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp\Panaya Automation\Agent\logs")
+base_path = Path(base_path_str)
 
 # Step 3: Find the latest subfolder (or first if that's your logic)
 subdirs = [d for d in base_path.iterdir() if d.is_dir()]
