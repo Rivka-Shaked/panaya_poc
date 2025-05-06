@@ -52,20 +52,20 @@ from pathlib import Path
 # print("Restarting Agent...")
 # os.system(r"type C:\Users\ltuser.ghtestVM\AppData\Local\Agent\config\settings.json") 
 exe_path = r"C:\Program Files\Panaya\Agent\Agent.exe"
-#args = ["--start"]
+# args = ["--start"]
 
 subprocess.Popen(exe_path, creationflags=subprocess.DETACHED_PROCESS)
 
 print("🔥 Panaya Agent Started")
 
-# # Step 1: Wait 10 seconds
+# Step 1: Wait 10 seconds
 # time.sleep(10)
 
 temp_dir = Path(tempfile.gettempdir())
 base_path_str = temp_dir / "Panaya Automation" / "Agent" / "logs"
 
 # Step 2: Define base logs path
-base_path = Path(base_path_str)
+base_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp\1\Panaya Automation\Agent\logs")
 
 # Step 3: Find the latest subfolder (or first if that's your logic)
 subdirs = [d for d in base_path.iterdir() if d.is_dir()]
