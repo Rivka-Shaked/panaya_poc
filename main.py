@@ -52,14 +52,14 @@ from pathlib import Path
 # print("Restarting Agent...")
 # os.system(r"type C:\Users\ltuser.ghtestVM\AppData\Local\Agent\config\settings.json") 
 exe_path = r"C:\Program Files\Panaya\Agent\Agent.exe"
-args = ["--start"]
+#args = ["--start"]
 
 subprocess.Popen(exe_path, creationflags=subprocess.DETACHED_PROCESS)
 
 print("🔥 Panaya Agent Started")
 
-# Step 1: Wait 10 seconds
-time.sleep(10)
+# # Step 1: Wait 10 seconds
+# time.sleep(10)
 
 temp_dir = Path(tempfile.gettempdir())
 base_path_str = temp_dir / "Panaya Automation" / "Agent" / "logs"
