@@ -11,8 +11,19 @@ import pygetwindow as gw
 import subprocess
 import tempfile
 from pathlib import Path
+import re
 
+# Path to your file
+file_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Agent\config\settings.json")
 
+# Read the entire file content
+text = file_path.read_text(encoding='utf-8')
+
+# Remove all backslashes followed by whitespace
+cleaned = re.sub(r'\\\s+', '', text)
+
+# Write the cleaned text back to the file
+file_path.write_text(cleaned, encoding='utf-8')
 
 # Step 1: Open the Agent application (if needed)
 #subprocess.Popen(r"C:\Program Files\Panaya\Agent\Agent.exe")  # Uncomment if Agent is not already running
@@ -42,6 +53,8 @@ from pathlib import Path
 # # Write Updated JSON
 # with open(json_file_path, 'w') as file:
 #     json.dump(data, file, indent=4)
+
+
 
 # print("✅ JSON File Updated Successfully")
 
