@@ -21,9 +21,13 @@ text = file_path.read_text(encoding='utf-8')
 
 # Remove all backslashes followed by whitespace
 cleaned = re.sub(r'\\\s+', '', text)
-
+print("Previous JSON Data:")
+print(cleaned)
 # Write the cleaned text back to the file
 file_path.write_text(cleaned, encoding='utf-8')
+
+time.sleep(5)
+
 
 # Step 1: Open the Agent application (if needed)
 #subprocess.Popen(r"C:\Program Files\Panaya\Agent\Agent.exe")  # Uncomment if Agent is not already running
