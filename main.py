@@ -20,7 +20,7 @@ file_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Agent\config\settings.
 text = file_path.read_text(encoding='utf-8')
 
 # Remove all backslashes followed by whitespace
-cleaned = re.sub(r'\\\s+', '', text)
+cleaned = re.sub(r'\\"', '"', text)
 print("Previous JSON Data:")
 print(cleaned)
 # Write the cleaned text back to the file
