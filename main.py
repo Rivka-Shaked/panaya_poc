@@ -86,7 +86,7 @@ print("🔥 Panaya Agent Started")
 # else:
 #     print(f"Agent.log not found in {latest_subdir}")
 # Define the Temp folder path
-temp_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp")
+temp_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp\2")
 
 # List all directories inside Temp
 for item in temp_path.iterdir():
