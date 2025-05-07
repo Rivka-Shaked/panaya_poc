@@ -61,27 +61,34 @@ print("🔥 Panaya Agent Started")
 # Step 1: Wait 10 seconds
 # time.sleep(10)
 
-temp_dir = Path(tempfile.gettempdir())
-base_path_str = temp_dir / "Panaya Automation" / "Agent" / "logs"
+# temp_dir = Path(tempfile.gettempdir())
+# base_path_str = temp_dir / "Panaya Automation" / "Agent" / "logs"
 
 # Step 2: Define base logs path
-base_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp\1\Panaya Automation\Agent\logs")
+# base_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp\1\Panaya Automation\Agent\logs")
 
-# Step 3: Find the latest subfolder (or first if that's your logic)
-subdirs = [d for d in base_path.iterdir() if d.is_dir()]
-if not subdirs:
-    print("No subdirectories found in logs folder.")
-    exit(1)
+# # Step 3: Find the latest subfolder (or first if that's your logic)
+# subdirs = [d for d in base_path.iterdir() if d.is_dir()]
+# if not subdirs:
+#     print("No subdirectories found in logs folder.")
+#     exit(1)
 
-# Option: sort by modified time (newest first)
-latest_subdir = max(subdirs, key=lambda d: d.stat().st_mtime)
+# # Option: sort by modified time (newest first)
+# latest_subdir = max(subdirs, key=lambda d: d.stat().st_mtime)
 
-# Step 4: Construct full path to Agent.log
-log_file = latest_subdir / "Agent.log"
+# # Step 4: Construct full path to Agent.log
+# log_file = latest_subdir / "Agent.log"
 
-# Step 5: Read and print file contents
-if log_file.exists():
-    with open(log_file, 'r', encoding='utf-8') as f:
-        print(f.read())
-else:
-    print(f"Agent.log not found in {latest_subdir}")
+# # Step 5: Read and print file contents
+# if log_file.exists():
+#     with open(log_file, 'r', encoding='utf-8') as f:
+#         print(f.read())
+# else:
+#     print(f"Agent.log not found in {latest_subdir}")
+# Define the Temp folder path
+temp_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp")
+
+# List all directories inside Temp
+for item in temp_path.iterdir():
+    if item.is_dir():
+        print(item)
