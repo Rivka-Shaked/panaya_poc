@@ -28,9 +28,9 @@ except json.JSONDecodeError as e:
     raise ValueError(f"Failed to parse JSON after cleaning: {e}")
 
 # Step 3: Append timestamp to agent_name
-if "agent_name" in data:
+if "agentName" in data:
     timestamp = datetime.now().strftime("%d_%m_%y_%H_%M_%S_%f")[:-3]
-    data["agent_name"] = f'{data["agent_name"]}_{timestamp}'
+    data["agentName"] = f'{data["agentName"]}_{timestamp}'
 
 # Step 4: Write fixed JSON to file
 file_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
