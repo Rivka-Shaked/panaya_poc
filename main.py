@@ -11,20 +11,28 @@ import pygetwindow as gw
 import subprocess
 import tempfile
 from pathlib import Path
+from datetime import datetime
 import re
 
-# Path to your file
 file_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Agent\config\settings.json")
 
-# Read the entire file content
+# Step 1: Clean the JSON string
 text = file_path.read_text(encoding='utf-8')
-
-# Remove all backslashes followed by whitespace
 cleaned = re.sub(r'\\\s+', '', text)
 
-# Write the cleaned text back to the file
-file_path.write_text(cleaned, encoding='utf-8')
+# Step 2: Parse JSON
+try:
+    data = json.loads(cleaned)
+except json.JSONDecodeError as e:
+    raise ValueError(f"Failed to parse JSON after cleaning: {e}")
 
+# Step 3: Append timestamp to agent_name
+if "agent_name" in data:
+    timestamp = datetime.now().strftime("%d_%m_%y_%H_%M_%S_%f")[:-3]
+    data["agent_name"] = f'{data["agent_name"]}_{timestamp}'
+
+# Step 4: Write fixed JSON to file
+file_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
 # Step 1: Open the Agent application (if needed)
 #subprocess.Popen(r"C:\Program Files\Panaya\Agent\Agent.exe")  # Uncomment if Agent is not already running
 
