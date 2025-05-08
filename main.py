@@ -18,8 +18,9 @@ file_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Agent\config\settings.
 
 # Step 1: Clean the JSON string
 text = file_path.read_text(encoding='utf-8')
-cleaned = re.sub(r'\\\s+', '', text)
-
+cleaned = re.sub(r'\\"', '"', text)
+print("Previous JSON Data:")
+print(cleaned)
 # Step 2: Parse JSON
 try:
     data = json.loads(cleaned)
@@ -33,6 +34,9 @@ if "agent_name" in data:
 
 # Step 4: Write fixed JSON to file
 file_path.write_text(json.dumps(data, indent=4), encoding='utf-8')
+
+time.sleep(5)
+
 # Step 1: Open the Agent application (if needed)
 #subprocess.Popen(r"C:\Program Files\Panaya\Agent\Agent.exe")  # Uncomment if Agent is not already running
 
@@ -107,7 +111,7 @@ print("🔥 Panaya Agent Started")
 # else:
 #     print(f"Agent.log not found in {latest_subdir}")
 # Define the Temp folder path
-temp_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp\1")
+temp_path = Path(r"C:\Users\ltuser.ghtestVM\AppData\Local\Temp")
 
 # List all directories inside Temp
 for item in temp_path.iterdir():
