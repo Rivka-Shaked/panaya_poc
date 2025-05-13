@@ -29,7 +29,7 @@ except json.JSONDecodeError as e:
 
 # Step 3: Append timestamp to agent_name
 if "agentName" in data:
-    timestamp = datetime.now().timestamp
+    timestamp = int(datetime.now().timestamp()*10000)  
     data["agentName"] = f'{data["agentName"]}_{timestamp}'
 
 # Step 4: Write fixed JSON to file
