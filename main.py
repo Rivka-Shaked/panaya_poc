@@ -79,7 +79,7 @@ time.sleep(5)
 exe_path = r"C:\Program Files\Panaya\Agent\Agent.exe"
 # args = ["--start"]
 
-#subprocess.Popen(exe_path, creationflags=subprocess.DETACHED_PROCESS)
+subprocess.Popen(exe_path, creationflags=subprocess.DETACHED_PROCESS)
 
 print("🔥 Panaya Agent Started")
 
