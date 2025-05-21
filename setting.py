@@ -12,7 +12,7 @@ if not os.path.exists(destination_dir):
 
 # Move the settings.json file
 if os.path.exists(source_path):
-    shutil.move(source_path, destination_path)
+    os.move(source_path, destination_path)
     print(f"settings.json has been moved to {destination_path}")
 else:
     print(f"Error: {source_path} does not exist.")
